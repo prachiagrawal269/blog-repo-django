@@ -3,8 +3,13 @@
 		<title>My blog</title>
 	</head>
 	<body>
-		<p>Holla!</p>
-		<p>Good to see you wokring :p</p>
+	{% for post in posts %}
+		<div>
+			<p>published: {{post.published_date }}</p>
+			<h1><a href="">{{post.title}}</a></h1>
+			<p>{{post.text|linebreaks }}</p>
+		</div>
+	{% endfor %}
 	</body>
 	
 </html>
